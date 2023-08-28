@@ -1,8 +1,7 @@
-# React + Vite
+First, form: button harus type button agar terjaga koneksi
+second, handle form array of object: bisa dibuat satu useState untuk satu data kemudian ketika mau send dijadikan satu dengan array utama
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Tech
+1. React + Vite
+2. React Icons
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

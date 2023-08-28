@@ -1,5 +1,4 @@
 import InputGroupEducation from "./InputGroupEducation";
-
 import { FaBan, FaSdCard } from "react-icons/fa";
 
 const EducationForm = ({
