@@ -2,7 +2,7 @@ import React from "react";
 
 import "../../styles/InputGroupPersonalDetail.css";
 
-const InputGroupPersonalDetail = ({personalDetail: {name, email, phone, address}, setPersonalDetail}) => {
+const InputGroupPersonalDetail = ({ personalDetail, setPersonalDetail }) => {
   return (
     <React.Fragment>
       <section>
@@ -17,9 +17,9 @@ const InputGroupPersonalDetail = ({personalDetail: {name, email, phone, address}
           id="name"
           placeholder="Enter your name"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
-          value={name}
+          value={personalDetail.name}
           onChange={(e) =>
-            setPersonalDetail({ name: e.target.value, email, phone, address })
+            setPersonalDetail({ ...personalDetail, name: e.target.value })
           }
         />
       </section>
@@ -36,9 +36,9 @@ const InputGroupPersonalDetail = ({personalDetail: {name, email, phone, address}
           id="email"
           placeholder="Enter your email"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
-          value={email}
+          value={personalDetail.email}
           onChange={(e) =>
-            setPersonalDetail({ name, email: e.target.value, phone, address })
+            setPersonalDetail({ ...personalDetail, email: e.target.value })
           }
         />
       </section>
@@ -58,9 +58,9 @@ const InputGroupPersonalDetail = ({personalDetail: {name, email, phone, address}
           id="phone"
           placeholder="Enter your phone number"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
-          value={phone}
+          value={personalDetail.phone}
           onChange={(e) =>
-            setPersonalDetail({ name, email, phone: e.target.value, address })
+            setPersonalDetail({ ...personalDetail, phone: e.target.value })
           }
         />
       </section>
@@ -77,9 +77,9 @@ const InputGroupPersonalDetail = ({personalDetail: {name, email, phone, address}
           id="address"
           placeholder="Enter your address"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
-          value={address}
+          value={personalDetail.address}
           onChange={(e) =>
-            setPersonalDetail({ name, email, phone, address: e.target.value })
+            setPersonalDetail({ ...personalDetail, address: e.target.value })
           }
         />
       </section>
