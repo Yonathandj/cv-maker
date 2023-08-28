@@ -1,7 +1,7 @@
 import React from "react";
 import { FaEye } from "react-icons/fa";
 
-const EducationDisplayListItem = () => {
+const EducationListItem = () => {
   return (
     <React.Fragment>
       <button className="w-full bg-sky-800 p-2 flex justify-between items-center mt-2 text-white rounded-sm">
@@ -18,4 +18,4 @@ const EducationDisplayListItem = () => {
   );
 };
 
-export default EducationDisplayListItem;
+export default EducationListItem;
