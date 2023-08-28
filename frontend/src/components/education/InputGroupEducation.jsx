@@ -24,6 +24,7 @@ const InputGroupEducation = ({ singleEducation, setSingleEducation }) => {
               school: e.target.value,
             })
           }
+          autoComplete="off"
         />
       </section>
       <section className="mt-4">
@@ -45,6 +46,7 @@ const InputGroupEducation = ({ singleEducation, setSingleEducation }) => {
               degree: e.target.value,
             })
           }
+          autoComplete="off"
         />
       </section>
       <section className="mt-4">
@@ -66,6 +68,7 @@ const InputGroupEducation = ({ singleEducation, setSingleEducation }) => {
               startDate: e.target.value,
             })
           }
+          autoComplete="off"
         />
       </section>
       <section className="mt-4">
@@ -87,6 +90,7 @@ const InputGroupEducation = ({ singleEducation, setSingleEducation }) => {
               endDate: e.target.value,
             })
           }
+          autoComplete="off"
         />
       </section>
       <section className="mt-4">
@@ -108,6 +112,7 @@ const InputGroupEducation = ({ singleEducation, setSingleEducation }) => {
               location: e.target.value,
             })
           }
+          autoComplete="off"
         />
       </section>
     </React.Fragment>

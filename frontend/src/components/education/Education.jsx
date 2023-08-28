@@ -9,7 +9,6 @@ const Education = ({ educations, setEducations }) => {
   const [sectionName, setSectionName] = useState("list");
 
   const [singleEducation, setSingleEducation] = useState({
-    id: "",
     school: "",
     degree: "",
     startDate: "",

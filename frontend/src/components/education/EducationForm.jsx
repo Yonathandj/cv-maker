@@ -10,7 +10,7 @@ const EducationForm = ({
 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    setEducations([...educations, singleEducation]);
+    setEducations([...educations, { id: +new Date(), ...singleEducation }]);
   };
 
   const handleResetForm = () => {
