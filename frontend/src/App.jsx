@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import CVDisplay from "./components/CVDisplay";
 import PersonalDetail from "./components/PersonalDetail";
+import Education from "./components/Education";
 
 function App() {
   const [personalDetail, setPersonalDetail] = useState({
@@ -17,6 +18,7 @@ function App() {
           {...personalDetail}
           setPersonalDetail={setPersonalDetail}
         />
+        <Education />
       </section>
       <section>
         <CVDisplay {...personalDetail} />
