@@ -1,5 +1,5 @@
 import React from "react";
-import InputGroup from "./InputGroup";
+import InputGroupPersonalDetail from "./InputGroupPersonalDetail";
 
 const PersonalDetail = (props) => {
   return (
@@ -8,7 +8,7 @@ const PersonalDetail = (props) => {
         <h2 className="text-2xl font-semibold text-center mb-3">
           Personal Detail
         </h2>
-        <InputGroup data={props} />
+        <InputGroupPersonalDetail data={props} />
       </form>
     </React.Fragment>
   );

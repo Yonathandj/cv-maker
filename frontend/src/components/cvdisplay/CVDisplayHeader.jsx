@@ -1,7 +1,7 @@
 import React from "react";
 import { FaEnvelope, FaPhone, FaGlobe } from "react-icons/fa";
 
-import "../styles/CVDisplay.css";
+import "../../styles/CVDisplay.css";
 
 const CVDisplayHeader = ({ data: { name, email, phone, address } }) => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 
-import "../styles/InputGroup.css";
+import "../../styles/InputGroupPersonalDetail.css";
 
-const InputGroup = ({
+const InputGroupPersonalDetail = ({
   data: { name, email, phone, address, setPersonalDetail },
 }) => {
   return (
@@ -51,7 +51,9 @@ const InputGroup = ({
           className="block text-gray-700 text-base font-semibold"
         >
           Phone Number{" "}
-          <span className="text-sm text-gray-400">recommended {"(country code e.g. 62)"}</span>
+          <span className="text-sm text-gray-400">
+            recommended {"(country code e.g. 62)"}
+          </span>
         </label>
         <input
           type="number"
@@ -87,4 +89,4 @@ const InputGroup = ({
   );
 };
 
-export default InputGroup;
+export default InputGroupPersonalDetail;

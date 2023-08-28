@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import CVDisplay from "./components/CVDisplay";
-import PersonalDetail from "./components/PersonalDetail";
-import Education from "./components/Education";
+import PersonalDetail from "./components/personaldetail/PersonalDetail";
+import Education from "./components/education/Education";
+import CVDisplay from "./components/cvdisplay/CVDisplay";
 
 function App() {
   const [personalDetail, setPersonalDetail] = useState({
