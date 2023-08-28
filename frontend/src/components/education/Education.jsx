@@ -1,19 +1,23 @@
 import { useState } from "react";
+
 import EducationButton from "./EducationButton";
-import EducationDisplay from "./EducationDisplay";
+import EducationList from "./EducationList";
+import EducationForm from "./EducationForm";
 
 const Education = () => {
   const [open, setOpen] = useState(false);
-  const [addEducation, setAddEducation] = useState(false);
+  const [sectionName, setSectionName] = useState("list");
+
   return (
     <div className="mt-5 bg-slate-200 p-4 rounded-md">
       <EducationButton open={open} setOpen={setOpen} />
-      <EducationDisplay
-        open={open}
-        setOpen={setOpen}
-        addEducation={addEducation}
-        setAddEducation={setAddEducation}
-      />
+      {open && sectionName === "list" ? (
+        <EducationList setSectionName={setSectionName} />
+      ) : open && sectionName === "form" ? (
+        <EducationForm setSectionName={setSectionName} />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

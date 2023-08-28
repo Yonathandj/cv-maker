@@ -1,12 +1,11 @@
 import InputGroupEducation from "./InputGroupEducation";
 
-const EducationForm = ({ open, setOpen }) => {
-  setOpen(!open);
+const EducationForm = ({ setSectionName }) => {
   return (
-    <form>
+    <form onSubmit={(e) => e.preventDefault()}>
       <InputGroupEducation />
-      <button>Cancel</button>
-      <button>Save</button>
+      <button onClick={() => setSectionName("list")}>Cancel</button>
+      <button onClick={() => setSectionName("list")}>Save</button>
     </form>
   );
 };

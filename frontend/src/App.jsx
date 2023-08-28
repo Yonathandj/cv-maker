@@ -11,6 +11,7 @@ function App() {
     phone: 62123456789,
     address: "Los Angeles, USA",
   });
+
   return (
     <div className="h-screen flex justify-around pt-8 w-[1224px]">
       <section>
