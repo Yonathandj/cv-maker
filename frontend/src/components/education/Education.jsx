@@ -20,7 +20,10 @@ const Education = ({ educations, setEducations }) => {
     <div className="mt-5 bg-slate-200 p-4 rounded-md">
       <EducationButton open={open} setOpen={setOpen} />
       {open && sectionName === "list" ? (
-        <EducationList setSectionName={setSectionName} />
+        <EducationList
+          educations={educations}
+          setSectionName={setSectionName}
+        />
       ) : open && sectionName === "form" ? (
         <EducationForm
           educations={educations}

@@ -1,19 +1,21 @@
 import React from "react";
 import { FaEye } from "react-icons/fa";
 
-const EducationListItem = () => {
+const EducationListItem = ({ educations, setSectionName }) => {
   return (
     <React.Fragment>
-      <button className="w-full bg-sky-800 p-2 flex justify-between items-center mt-2 text-white rounded-sm">
-        <h2 className="text-base font-medium tracking-wide">
-          London University
-        </h2>
-        <FaEye className="text-xl" />
-      </button>
-      <button className="w-full bg-sky-800 p-2 flex justify-between items-center mt-2 text-white rounded-sm">
-        <h2 className="text-base font-medium tracking-wide">UNS University</h2>
-        <FaEye className="text-xl" />
-      </button>
+      {educations.map((education) => (
+        <button
+          className="w-full bg-slate-300 p-2 flex justify-between items-center mt-2 rounded-sm"
+          key={education.id}
+          onClick={() => setSectionName("form")}
+        >
+          <h2 className="text-base font-medium tracking-wide">
+            {education.school}
+          </h2>
+          <FaEye className="text-xl" />
+        </button>
+      ))}
     </React.Fragment>
   );
 };
