@@ -2,7 +2,7 @@ import React from "react";
 
 import "../../styles/InputGroupEducation.css";
 
-const InputGroupEducation = () => {
+const InputGroupEducation = ({ singleEducation, setSingleEducation }) => {
   return (
     <React.Fragment>
       <section>
@@ -17,6 +17,13 @@ const InputGroupEducation = () => {
           id="school"
           placeholder="Enter school / university"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
+          value={singleEducation.school}
+          onChange={(e) =>
+            setSingleEducation({
+              ...singleEducation,
+              school: e.target.value,
+            })
+          }
         />
       </section>
       <section className="mt-4">
@@ -31,6 +38,13 @@ const InputGroupEducation = () => {
           id="degree"
           placeholder="Enter degree / field of study"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
+          value={singleEducation.degree}
+          onChange={(e) =>
+            setSingleEducation({
+              ...singleEducation,
+              degree: e.target.value,
+            })
+          }
         />
       </section>
       <section className="mt-4">
@@ -45,6 +59,13 @@ const InputGroupEducation = () => {
           id="start-date"
           placeholder="Enter start date"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
+          value={singleEducation.startDate}
+          onChange={(e) =>
+            setSingleEducation({
+              ...singleEducation,
+              startDate: e.target.value,
+            })
+          }
         />
       </section>
       <section className="mt-4">
@@ -59,6 +80,13 @@ const InputGroupEducation = () => {
           id="end-date"
           placeholder="Enter end date"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
+          value={singleEducation.endDate}
+          onChange={(e) =>
+            setSingleEducation({
+              ...singleEducation,
+              endDate: e.target.value,
+            })
+          }
         />
       </section>
       <section className="mt-4">
@@ -73,6 +101,13 @@ const InputGroupEducation = () => {
           id="location"
           placeholder="Enter location"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
+          value={singleEducation.location}
+          onChange={(e) =>
+            setSingleEducation({
+              ...singleEducation,
+              location: e.target.value,
+            })
+          }
         />
       </section>
     </React.Fragment>

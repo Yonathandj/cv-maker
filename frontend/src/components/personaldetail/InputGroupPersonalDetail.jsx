@@ -2,9 +2,7 @@ import React from "react";
 
 import "../../styles/InputGroupPersonalDetail.css";
 
-const InputGroupPersonalDetail = ({
-  data: { name, email, phone, address, setPersonalDetail },
-}) => {
+const InputGroupPersonalDetail = ({personalDetail: {name, email, phone, address}, setPersonalDetail}) => {
   return (
     <React.Fragment>
       <section>
