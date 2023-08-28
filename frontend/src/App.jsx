@@ -12,7 +12,7 @@ function App() {
     address: "Los Angeles, USA",
   });
   return (
-    <div className="w-screen h-screen flex justify-around pt-8">
+    <div className="h-screen flex justify-around pt-8 w-[1224px]">
       <section>
         <PersonalDetail
           {...personalDetail}

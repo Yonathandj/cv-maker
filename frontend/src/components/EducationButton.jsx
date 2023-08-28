@@ -1,17 +1,22 @@
 import React from "react";
 
-import { FaUserGraduate, FaChevronDown } from "react-icons/fa";
+import { FaUserGraduate, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-const EducationButton = () => {
+const EducationButton = ({ open, setOpen }) => {
   return (
     <React.Fragment>
-      <button className="w-full p-2 flex justify-between items-center">
-        <section className="flex justify-center items-center gap-4 text-lg font-semibold">
-          <FaUserGraduate className="text-4xl" />
-          <h4>Education</h4>
+      <button
+        className="w-full p-2 flex justify-between items-center"
+        onClick={() => setOpen(!open)}
+      >
+        <section className="flex justify-center items-center gap-x-4 font-semibold">
+          <FaUserGraduate className="text-3xl" />
+          <h4 className="text-lg mt-1">Education</h4>
         </section>
         <section>
-          <FaChevronDown />
+          {
+            open ? <FaChevronUp /> : <FaChevronDown/>
+          }
         </section>
       </button>
     </React.Fragment>
