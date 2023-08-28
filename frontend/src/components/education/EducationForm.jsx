@@ -48,10 +48,9 @@ const EducationForm = ({
           type="button"
           className="py-2 px-6 bg-sky-600 rounded-md flex items-center gap-2"
           onClick={(e) => {
-            e.preventDefault();
-            setSectionName("list");
-            setEducations([...educations, singleEducation]);
+            handleSubmit(e);
             handleResetForm();
+            setSectionName("list");
           }}
         >
           <FaSdCard className="text-white" />
