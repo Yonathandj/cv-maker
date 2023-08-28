@@ -51,7 +51,7 @@ const InputGroup = ({
           className="block text-gray-700 text-base font-semibold"
         >
           Phone Number{" "}
-          <span className="text-sm text-gray-400">recommended</span>
+          <span className="text-sm text-gray-400">recommended {"(country code e.g. 62)"}</span>
         </label>
         <input
           type="number"
