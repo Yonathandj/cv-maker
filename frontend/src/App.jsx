@@ -12,8 +12,6 @@ function App() {
     address: "",
   });
   const [educations, setEducations] = useState([]);
-
-  console.log(educations);
   return (
     <div className="h-screen flex justify-around pt-8 w-[1224px]">
       <section>
