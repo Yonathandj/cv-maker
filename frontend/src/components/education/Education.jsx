@@ -6,8 +6,8 @@ import EducationForm from "./EducationForm";
 
 const Education = ({ educations, setEducations }) => {
   const [open, setOpen] = useState(false);
+  const [editedId, setEditedId] = useState("");
   const [sectionName, setSectionName] = useState("list");
-
   const [singleEducation, setSingleEducation] = useState({
     school: "",
     degree: "",
@@ -22,10 +22,13 @@ const Education = ({ educations, setEducations }) => {
       {open && sectionName === "list" ? (
         <EducationList
           educations={educations}
+          setEditedId={setEditedId}
           setSectionName={setSectionName}
+          setSingleEducation={setSingleEducation}
         />
       ) : open && sectionName === "form" ? (
         <EducationForm
+          editedId={editedId}
           educations={educations}
           setEducations={setEducations}
           singleEducation={singleEducation}

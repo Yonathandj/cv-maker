@@ -2,17 +2,21 @@ import InputGroupEducation from "./InputGroupEducation";
 import { FaBan, FaSdCard } from "react-icons/fa";
 
 const EducationForm = ({
-  setSectionName,
+  editedId,
   educations,
   setEducations,
   singleEducation,
   setSingleEducation,
+  setSectionName,
 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    setEducations([...educations, { id: +new Date(), ...singleEducation }]);
+    setSectionName("list");
+    setEducations([
+      ...educations.filter((education) => education.id !== editedId),
+      { id: +new Date(), ...singleEducation },
+    ]);
   };
-
   const handleResetForm = () => {
     setSingleEducation({
       school: "",
@@ -49,7 +53,6 @@ const EducationForm = ({
           onClick={(e) => {
             handleSubmit(e);
             handleResetForm();
-            setSectionName("list");
           }}
         >
           <FaSdCard className="text-white" />

@@ -3,13 +3,20 @@ import { FaPlusCircle } from "react-icons/fa";
 
 import EducationListItem from "./EducationListItem";
 
-const EducationList = ({ educations, setSectionName }) => {
+const EducationList = ({
+  educations,
+  setSectionName,
+  setSingleEducation,
+  setEditedId,
+}) => {
   return (
     <React.Fragment>
       <section>
         <EducationListItem
           educations={educations}
+          setEditedId={setEditedId}
           setSectionName={setSectionName}
+          setSingleEducation={setSingleEducation}
         />
         <button
           className="flex gap-2 items-center mt-6 mx-auto px-10 py-2 bg-slate-300 rounded-md"
