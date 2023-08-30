@@ -6,13 +6,12 @@ import CVDisplay from "./components/cvdisplay/CVDisplay";
 
 function App() {
   const [personalDetail, setPersonalDetail] = useState({
-    name: "",
+    name: "Yesaya Armando",
     email: "",
     phone: "",
     address: "",
   });
   const [educations, setEducations] = useState([]);
-  console.log(educations);
   return (
     <div className="h-screen flex justify-around pt-8 w-[1200px] m-auto">
       <section>
