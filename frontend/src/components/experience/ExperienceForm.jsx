@@ -1,31 +1,26 @@
-import InputGroupEducation from "./InputGroupEducation";
+import InputGroupExperience from "./InputGroupExperience";
 import { FaBan, FaSdCard } from "react-icons/fa";
 
 const EducationForm = ({
   editedId,
-  educations,
-  setEducations,
-  singleEducation,
-  setSingleEducation,
   setSectionName,
+  experiences,
+  setExperiences,
+  singleExperience,
+  setSingleExperience,
 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSectionName("list");
-    singleEducation.isShow === ""
-      ? setEducations([
-          ...educations.filter((education) => education.id !== editedId),
-          { ...singleEducation, id: +new Date(), isShow: true },
-        ])
-      : setEducations([
-          ...educations.filter((education) => education.id !== editedId),
-          { ...singleEducation, id: +new Date(), isShow: singleEducation.isShow },
-        ]);
+    setExperiences([
+      ...experiences.filter((experience) => experience.id !== editedId),
+      { ...singleExperience, id: +new Date(), isShow: true },
+    ]);
   };
   const handleResetForm = () => {
-    setSingleEducation({
-      school: "",
-      degree: "",
+    setSingleExperience({
+      companyName: "",
+      positionTitle: "",
       startDate: "",
       endDate: "",
       location: "",
@@ -39,7 +34,7 @@ const EducationForm = ({
         handleResetForm();
       }}
     >
-      <InputGroupEducation
+      <InputGroupExperience
         singleEducation={singleEducation}
         setSingleEducation={setSingleEducation}
       />
