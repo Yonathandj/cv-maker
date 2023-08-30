@@ -14,6 +14,7 @@ const Education = ({ educations, setEducations }) => {
     startDate: "",
     endDate: "",
     location: "",
+    isShow: "",
   });
 
   return (
@@ -22,6 +23,7 @@ const Education = ({ educations, setEducations }) => {
       {open && sectionName === "list" ? (
         <EducationList
           educations={educations}
+          setEducations={setEducations}
           setEditedId={setEditedId}
           setSectionName={setSectionName}
           setSingleEducation={setSingleEducation}

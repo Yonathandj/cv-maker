@@ -5,15 +5,17 @@ import EducationListItem from "./EducationListItem";
 
 const EducationList = ({
   educations,
+  setEducations,
+  setEditedId,
   setSectionName,
   setSingleEducation,
-  setEditedId,
 }) => {
   return (
     <React.Fragment>
       <section>
         <EducationListItem
           educations={educations}
+          setEducations={setEducations}
           setEditedId={setEditedId}
           setSectionName={setSectionName}
           setSingleEducation={setSingleEducation}

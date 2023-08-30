@@ -14,7 +14,7 @@ const EducationForm = ({
     setSectionName("list");
     setEducations([
       ...educations.filter((education) => education.id !== editedId),
-      { id: +new Date(), ...singleEducation },
+      { ...singleEducation, id: +new Date(), isShow: true },
     ]);
   };
   const handleResetForm = () => {
