@@ -24,6 +24,9 @@ const EducationListItem = ({
       )
     );
   };
+  const handleDeleteEducation = (id) => {
+    setEducations(educations.filter((education) => education.id !== id));
+  };
   return (
     <React.Fragment>
       {educations.map((education) => (
@@ -50,7 +53,10 @@ const EducationListItem = ({
               onClick={() => handleIsShowEducation(education.id)}
             />
           )}
-          <FaTrashAlt className="text-lg cursor-pointer" />
+          <FaTrashAlt
+            className="text-lg cursor-pointer"
+            onClick={() => handleDeleteEducation(education.id)}
+          />
         </div>
       ))}
     </React.Fragment>
