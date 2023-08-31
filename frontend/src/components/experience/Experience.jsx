@@ -23,9 +23,9 @@ const Experience = ({ experiences, setExperiences }) => {
       <ExperienceButton open={open} setOpen={setOpen} />
       {open && sectionName === "list" ? (
         <ExperienceList
+          setEditedId={setEditedId}
           experiences={experiences}
           setExperiences={setExperiences}
-          setEditedId={setEditedId}
           setSectionName={setSectionName}
           setSingleExperience={setSingleExperience}
         />

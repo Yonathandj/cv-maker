@@ -2,9 +2,9 @@ import React from "react";
 import { FaEye, FaEyeSlash, FaTrashAlt } from "react-icons/fa";
 
 const ExperienceListItem = ({
+  setEditedId,
   experiences,
   setExperiences,
-  setEditedId,
   setSectionName,
   setSingleExperience,
 }) => {

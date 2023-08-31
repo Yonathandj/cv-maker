@@ -12,7 +12,7 @@ const EducationForm = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     setSectionName("list");
-    singleEducation.isShow === ""
+    singleEducation.isShow === undefined
       ? setEducations([
           ...educations.filter((education) => education.id !== editedId),
           { ...singleEducation, id: +new Date(), isShow: true },

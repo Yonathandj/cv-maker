@@ -14,9 +14,9 @@ const ExperienceList = ({
     <React.Fragment>
       <section>
         <ExperienceListItem
+          setEditedId={setEditedId}
           experiences={experiences}
           setExperiences={setExperiences}
-          setEditedId={setEditedId}
           setSectionName={setSectionName}
           setSingleExperience={setSingleExperience}
         />

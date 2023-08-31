@@ -14,7 +14,7 @@ function App() {
   });
   const [educations, setEducations] = useState([]);
   const [experiences, setExperiences] = useState([]);
-  console.log(experiences);
+  console.log(educations);
   return (
     <div className="h-screen flex justify-around pt-8 w-[1200px] m-auto">
       <section>
