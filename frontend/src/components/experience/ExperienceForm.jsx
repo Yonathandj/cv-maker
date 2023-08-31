@@ -1,7 +1,7 @@
 import InputGroupExperience from "./InputGroupExperience";
 import { FaBan, FaSdCard } from "react-icons/fa";
 
-const EducationForm = ({
+const ExperienceForm = ({
   editedId,
   setSectionName,
   experiences,
@@ -12,10 +12,23 @@ const EducationForm = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     setSectionName("list");
-    setExperiences([
-      ...experiences.filter((experience) => experience.id !== editedId),
-      { ...singleExperience, id: +new Date(), isShow: true },
-    ]);
+    singleExperience.isShow === ""
+      ? setExperiences([
+          ...experiences.filter((experience) => experience.id !== editedId),
+          {
+            ...singleExperience,
+            id: +new Date(),
+            isShow: true,
+          },
+        ])
+      : setExperiences([
+          ...experiences.filter((experience) => experience.id !== editedId),
+          {
+            ...singleExperience,
+            id: +new Date(),
+            isShow: singleExperience.isShow,
+          },
+        ]);
   };
   const handleResetForm = () => {
     setSingleExperience({
@@ -24,6 +37,7 @@ const EducationForm = ({
       startDate: "",
       endDate: "",
       location: "",
+      description: "",
     });
   };
 
@@ -35,8 +49,8 @@ const EducationForm = ({
       }}
     >
       <InputGroupExperience
-        singleEducation={singleEducation}
-        setSingleEducation={setSingleEducation}
+        singleExperience={singleExperience}
+        setSingleExperience={setSingleExperience}
       />
       <section className="flex gap-4 mt-4">
         <button
@@ -63,4 +77,4 @@ const EducationForm = ({
   );
 };
 
-export default EducationForm;
+export default ExperienceForm;

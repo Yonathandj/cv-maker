@@ -39,7 +39,7 @@ const ExperienceListItem = ({
             className="text-left w-full"
           >
             <h2 className="text-sm font-medium">
-              {experience.school + " - " + experience.degree}
+              {experience.companyName + " - " + experience.positionTitle}
             </h2>
           </button>
           {experience.isShow ? (

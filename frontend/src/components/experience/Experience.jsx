@@ -15,6 +15,7 @@ const Experience = ({ experiences, setExperiences }) => {
     endDate: "",
     location: "",
     isShow: "",
+    description: "",
   });
 
   return (

@@ -2,26 +2,26 @@ import React from "react";
 
 import "../../styles/InputGroupEducation.css";
 
-const InputGroupEducation = ({ singleEducation, setSingleEducation }) => {
+const InputGroupEducation = ({ singleExperience, setSingleExperience }) => {
   return (
     <React.Fragment>
       <section>
         <label
-          htmlFor="school"
+          htmlFor="company-name"
           className="block text-gray-700 text-base font-semibold"
         >
-          School
+          Company Name
         </label>
         <input
           type="text"
-          id="school"
-          placeholder="Enter school / university"
+          id="company-name"
+          placeholder="Enter company name"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
-          value={singleEducation.school}
+          value={singleExperience.companyName}
           onChange={(e) =>
-            setSingleEducation({
-              ...singleEducation,
-              school: e.target.value,
+            setSingleExperience({
+              ...singleExperience,
+              companyName: e.target.value,
             })
           }
           autoComplete="off"
@@ -29,21 +29,21 @@ const InputGroupEducation = ({ singleEducation, setSingleEducation }) => {
       </section>
       <section className="mt-4">
         <label
-          htmlFor="degree"
+          htmlFor="position-title"
           className="block text-gray-700 text-base font-semibold"
         >
-          Degree
+          Position Title
         </label>
         <input
           type="text"
-          id="degree"
-          placeholder="Enter degree / field of study"
+          id="position-title"
+          placeholder="Enter position title"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
-          value={singleEducation.degree}
+          value={singleExperience.positionTitle}
           onChange={(e) =>
-            setSingleEducation({
-              ...singleEducation,
-              degree: e.target.value,
+            setSingleExperience({
+              ...singleExperience,
+              positionTitle: e.target.value,
             })
           }
           autoComplete="off"
@@ -61,10 +61,10 @@ const InputGroupEducation = ({ singleEducation, setSingleEducation }) => {
           id="start-date"
           placeholder="Enter start date"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
-          value={singleEducation.startDate}
+          value={singleExperience.startDate}
           onChange={(e) =>
-            setSingleEducation({
-              ...singleEducation,
+            setSingleExperience({
+              ...singleExperience,
               startDate: e.target.value,
             })
           }
@@ -83,10 +83,10 @@ const InputGroupEducation = ({ singleEducation, setSingleEducation }) => {
           id="end-date"
           placeholder="Enter end date"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
-          value={singleEducation.endDate}
+          value={singleExperience.endDate}
           onChange={(e) =>
-            setSingleEducation({
-              ...singleEducation,
+            setSingleExperience({
+              ...singleExperience,
               endDate: e.target.value,
             })
           }
@@ -105,15 +105,37 @@ const InputGroupEducation = ({ singleEducation, setSingleEducation }) => {
           id="location"
           placeholder="Enter location"
           className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
-          value={singleEducation.location}
+          value={singleExperience.location}
           onChange={(e) =>
-            setSingleEducation({
-              ...singleEducation,
+            setSingleExperience({
+              ...singleExperience,
               location: e.target.value,
             })
           }
           autoComplete="off"
         />
+      </section>
+      <section className="mt-4">
+        <label
+          htmlFor="description"
+          className="block text-gray-700 text-base font-semibold"
+        >
+          Description
+        </label>
+        <textarea
+          name="description"
+          id="description"
+          className="shadow rounded-sm p-2 text-gray-700 focus:outline-none text-sm w-full"
+          cols="40"
+          rows="5"
+          value={singleExperience.description}
+          onChange={(e) =>
+            setSingleExperience({
+              ...singleExperience,
+              description: e.target.value,
+            })
+          }
+        ></textarea>
       </section>
     </React.Fragment>
   );
