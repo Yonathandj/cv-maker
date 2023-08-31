@@ -1,8 +1,8 @@
 import React from "react";
 
-import "../../styles/InputGroupEducation.css";
+import "../../styles/InputGroupExperience.css";
 
-const InputGroupEducation = ({ singleExperience, setSingleExperience }) => {
+const InputGroupExperience = ({ singleExperience, setSingleExperience }) => {
   return (
     <React.Fragment>
       <section>
@@ -141,4 +141,4 @@ const InputGroupEducation = ({ singleExperience, setSingleExperience }) => {
   );
 };
 
-export default InputGroupEducation;
+export default InputGroupExperience;

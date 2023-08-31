@@ -3,11 +3,11 @@ import { FaBan, FaSdCard } from "react-icons/fa";
 
 const ExperienceForm = ({
   editedId,
-  setSectionName,
   experiences,
   setExperiences,
   singleExperience,
   setSingleExperience,
+  setSectionName,
 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,11 +15,7 @@ const ExperienceForm = ({
     singleExperience.isShow === ""
       ? setExperiences([
           ...experiences.filter((experience) => experience.id !== editedId),
-          {
-            ...singleExperience,
-            id: +new Date(),
-            isShow: true,
-          },
+          { ...singleExperience, id: +new Date(), isShow: true },
         ])
       : setExperiences([
           ...experiences.filter((experience) => experience.id !== editedId),

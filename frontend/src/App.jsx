@@ -7,7 +7,7 @@ import CVDisplay from "./components/cvdisplay/CVDisplay";
 
 function App() {
   const [personalDetail, setPersonalDetail] = useState({
-    name: "Yesaya Armando",
+    name: "",
     email: "",
     phone: "",
     address: "",

@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+#company-name,
+#position-title,
+#start-date,
+#end-date,
+#location,
+#description {
+  font-family: "Poppins", sans-serif;
+}
