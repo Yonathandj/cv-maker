@@ -14,6 +14,7 @@ function App() {
   });
   const [educations, setEducations] = useState([]);
   const [experiences, setExperiences] = useState([]);
+  const [openEduExp, setOpenEduExp] = useState("none");
   return (
     <div className="h-screen flex justify-around pt-8 w-[1200px] m-auto">
       <section>
@@ -21,8 +22,18 @@ function App() {
           personalDetail={personalDetail}
           setPersonalDetail={setPersonalDetail}
         />
-        <Education educations={educations} setEducations={setEducations} />
-        <Experience experiences={experiences} setExperiences={setExperiences} />
+        <Education
+          educations={educations}
+          setEducations={setEducations}
+          openEduExp={openEduExp}
+          setOpenEduExp={setOpenEduExp}
+        />
+        <Experience
+          experiences={experiences}
+          setExperiences={setExperiences}
+          openEduExp={openEduExp}
+          setOpenEduExp={setOpenEduExp}
+        />
       </section>
       <section>
         <CVDisplay {...personalDetail} />
