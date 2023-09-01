@@ -19,7 +19,7 @@ function App() {
   console.log(educations);
 
   return (
-    <div className="h-screen flex justify-around pt-8 w-[1200px] m-auto">
+    <div className="h-screen flex justify-around pt-8 w-[1200px] mx-auto gap-4">
       <section>
         <PersonalDetail
           personalDetail={personalDetail}
