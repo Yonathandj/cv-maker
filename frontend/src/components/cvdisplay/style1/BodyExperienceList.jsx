@@ -11,7 +11,7 @@ const BodyExperienceList = ({ experiences }) => {
                 <p className="text-base font-medium">
                   {experience.startDate + " / " + experience.endDate}
                 </p>
-                <p className="text-base font-semibold">{experience.location}</p>
+                <p className="text-base font-medium">{experience.location}</p>
               </div>
               <div className="w-3/4 ml-2">
                 <p className="text-xl font-semibold">
