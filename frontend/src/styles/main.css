@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 body::-webkit-scrollbar {
   display: none;
 }
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+#display {
+  font-family: "Poppins", sans-serif;
 }
