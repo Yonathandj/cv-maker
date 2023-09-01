@@ -12,7 +12,7 @@ const ExperienceForm = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     setSectionName("list");
-    singleExperience.isShow === undefined
+    singleExperience.isShow === undefined || singleExperience.isShow === null
       ? setExperiences([
           ...experiences.filter((experience) => experience.id !== editedId),
           { ...singleExperience, id: +new Date(), isShow: true },

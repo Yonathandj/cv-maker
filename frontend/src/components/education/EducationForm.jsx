@@ -12,14 +12,18 @@ const EducationForm = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     setSectionName("list");
-    singleEducation.isShow === undefined
+    singleEducation.isShow === null || singleEducation.isShow === undefined
       ? setEducations([
           ...educations.filter((education) => education.id !== editedId),
           { ...singleEducation, id: +new Date(), isShow: true },
         ])
       : setEducations([
           ...educations.filter((education) => education.id !== editedId),
-          { ...singleEducation, id: +new Date(), isShow: singleEducation.isShow },
+          {
+            ...singleEducation,
+            id: +new Date(),
+            isShow: singleEducation.isShow,
+          },
         ]);
   };
   const handleResetForm = () => {

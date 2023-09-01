@@ -18,7 +18,7 @@ const Education = ({
     startDate: "",
     endDate: "",
     location: "",
-    isShow: "",
+    isShow: null,
   });
 
   return (

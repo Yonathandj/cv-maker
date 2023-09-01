@@ -15,6 +15,9 @@ function App() {
   const [educations, setEducations] = useState([]);
   const [experiences, setExperiences] = useState([]);
   const [openEduExp, setOpenEduExp] = useState("none");
+
+  console.log(educations);
+
   return (
     <div className="h-screen flex justify-around pt-8 w-[1200px] m-auto">
       <section>
@@ -36,7 +39,11 @@ function App() {
         />
       </section>
       <section>
-        <CVDisplay {...personalDetail} />
+        <CVDisplay
+          personalDetail={personalDetail}
+          educations={educations}
+          experiences={experiences}
+        />
       </section>
     </div>
   );
