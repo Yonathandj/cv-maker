@@ -5,7 +5,7 @@ import CVDisplayBody from "./style1/CVDisplayBody";
 
 const CVDisplay = ({ personalDetail, educations, experiences }) => {
   return (
-    <div className="w-[800px] bg-slate-200 p-2 shadow rounded-sm">
+    <div className="w-[800px] bg-slate-200 p-2 shadow-xl rounded-sm">
       <CVDisplayHeader personalDetail={personalDetail} />
       <CVDisplayBody educations={educations} experiences={experiences} />
     </div>
